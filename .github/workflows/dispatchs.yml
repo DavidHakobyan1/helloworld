@@ -21,12 +21,15 @@ jobs:
           
       - name: Git clone
         uses: actions/checkout@v3
-    
-      - name: Build.
+        
+      - name: List Clone files
+        run: ls
+        
+      - name: Go Build.
         run: go build -v ./...
         
-      - name: list
-        run: ls
+      - name: Go Test
+        run: go test -v ./...
       
       - name: Run main.go
         run: go run main.go
