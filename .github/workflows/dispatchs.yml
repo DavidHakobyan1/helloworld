@@ -29,7 +29,7 @@ jobs:
         
       - name: Go Mod
         run: |
-          go mod init v1
+          go mod init
         
       - name: Go Build.
         run: go build -v ./...
