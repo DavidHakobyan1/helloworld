@@ -21,6 +21,9 @@ jobs:
     
       - name: Build.
         run: go build -v ./...
+        
+      - name: list
+        run: ls
       
       - name: Run main.go
         run: go run main.go
