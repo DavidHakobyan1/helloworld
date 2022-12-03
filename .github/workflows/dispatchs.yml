@@ -1,0 +1,29 @@
+on:
+  workflow_dispatch:
+    inputs:
+      Go_Version:
+        description: 'Set GO version'
+        required: true
+        default: '1.15'
+        type: choice
+        options:
+        - '1.15'
+        - '1.16'
+        - '1.17'
+jobs:
+  log-the-inputs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup GO with ${{ inputs.Go_Version }} version
+        uses: actions/setup-go@v3
+        with:
+          go-version: ${{ inputs.Go_Version }}
+    
+      - name: Build.
+        run: go build -v ./...
+    
+      - name: Test
+        run: go test -v ./...
+      
+      - name: Run main.go
+        run: go run main.go
