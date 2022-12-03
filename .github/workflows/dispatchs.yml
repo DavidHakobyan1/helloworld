@@ -27,7 +27,7 @@ jobs:
       - name: List Clone files
         run: ls
         
-      - name: commands
+      - name: Go Mod
         run: |
           go mod init v1
         
