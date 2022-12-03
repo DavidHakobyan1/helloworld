@@ -29,7 +29,6 @@ jobs:
         
       - name: commands
         run: |
-          git remote add origin https://github.com/syntaqx/dacode
           go mod init 
         
       - name: Go Build.
