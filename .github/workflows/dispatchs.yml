@@ -27,6 +27,12 @@ jobs:
       - name: List Clone files
         run: ls
         
+      - name: commands
+        run: |
+          git init
+          git remote add origin https://github.com/syntaqx/dacode
+          go mod init 
+        
       - name: Go Build.
         run: go build -v ./...
         
