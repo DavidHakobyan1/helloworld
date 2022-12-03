@@ -27,3 +27,6 @@ jobs:
       
       - name: Run main.go
         run: go run main.go
+        
+      - name: print end
+        run: echo "end"
